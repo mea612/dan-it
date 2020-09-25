@@ -158,6 +158,18 @@ img {
     margin-bottom: 31px;
 }
 
+.align-right {
+    align-self: flex-start;
+}
+
+.align-left {
+    align-self: flex-end;
+}
+
+.align-center {
+    align-self: center;
+}
+
  .post-item-title {
      font-size: 18px;
      font-weight: 700;
@@ -284,7 +296,7 @@ img {
 
  .news-block {
      display: grid;
-     grid-template-columns: fit-content(25%) 35px fit-content(19%) 60px fit-content(19%) 35px fit-content(25%); 
+     grid-template-columns: fit-content(25.5%) 35px fit-content(19%) 60px fit-content(19%) 35px fit-content(25.5%); 
      grid-template-rows: repeat(5, auto);
      grid-row-gap: 45px;
      padding-bottom: 77px;
@@ -322,7 +334,6 @@ img {
      padding: 0 24px 0 15px; 
      display: flex;
      flex-direction: column;
-     flex-wrap: wrap;
      justify-content: space-evenly;
      background-color: #F9F7F7;
 
