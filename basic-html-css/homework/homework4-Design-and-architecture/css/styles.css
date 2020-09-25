@@ -417,21 +417,26 @@ img {
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .site-footer-copyright {
     color: #fff;
     font-size: 13px;
+    align-self: center;
 }
 
 .footer-logo {
-    display: flex;
+    justify-self: end;
+}
+
+.footer-img,
+.footer-text-img {
+    display: inline-block;
 }
 
 .footer-text-img {
-    align-self: flex-start;
+    vertical-align: top;
 }
 
