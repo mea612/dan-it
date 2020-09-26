@@ -49,8 +49,8 @@ img {
 
 }
 
-.navbar-nav-item:not(:first-child) {
-    margin-left: 35px;
+.navbar-nav-item {
+    padding: 0 18px;
 }
 
 .navbar-nav-link {
@@ -85,7 +85,7 @@ img {
 
 
 .header {
-    background: url("../img/header-bg.jpeg") no-repeat center center;
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("../img/header-bg.jpeg") no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -181,6 +181,7 @@ img {
      background: url("../img/parallax-bg.jpeg") no-repeat center center;
      background-size: cover;
      background-attachment: fixed;
+     padding-bottom: 190px;
  }
 
  .clients-container {
@@ -189,7 +190,6 @@ img {
      grid-template-rows: 1fr fit-content(25%) fit-content(25%);
      grid-column-gap: 50px;
      align-items: center;
-     padding-bottom: 190px;
  }
 
  .clients-title {
@@ -244,7 +244,6 @@ img {
      background-color: #E5E5E5;
      display: grid;
      grid-template-columns: repeat(7, 1fr);
-     grid-template-rows: 1fr;
  }
 
  .title {
