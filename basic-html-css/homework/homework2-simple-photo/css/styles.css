@@ -27,21 +27,20 @@ a {
 }
 
 .site-header {
-    padding: 30px 330px;
+    padding: 30px 0;
+    text-align: center;
 }
 
-.site-nav-list__link {
+.top-nav-item {
     list-style: none;
     display: inline-block;
+}
+
+.top-nav-item:not(:first-child) {
     margin-left: 86px;
 }
 
-.site-nav-list__link:first-child {
-    margin-left: 0;
-}
-
-
-.site-nav-list__link a {
+.top-nav-link {
     text-transform: uppercase;
     color: #FF0000;
     font-size: 18px;
@@ -95,10 +94,11 @@ a {
 
 .site-footer {
     text-align: right;
-    padding: 40px 105px 40px 0;
+    padding: 40px 0;
 }
 
 .site-footer small {
+    padding-right: 105px;
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 2.4px;
