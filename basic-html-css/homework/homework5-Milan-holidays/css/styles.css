@@ -1,0 +1,200 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block; 
+    max-width: 100%; 
+    height: auto;
+}
+
+.container {
+    width: 1023px;
+    margin: 0 auto;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+}
+
+.bg-container {
+    background: url('../img/bg-image.jpg') no-repeat;
+    background-size: cover;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 51px;
+    padding-bottom: 22px;
+}
+
+.logo-link {
+    display: flex;
+    color: #fff;
+    transition: all ease .3s;
+}
+
+.milan path {
+    fill: #fff;
+}
+
+.logo-link:hover {
+    color: #F26522;
+}
+
+.logo-link:hover .milan path {
+    fill: #F26522;
+}
+
+.site-logo-img {
+    margin-right: 10px;
+}
+
+.site-logo-text {
+    font-weight: 700;
+    text-transform: uppercase;
+    align-self: flex-end;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.logo-big {
+    display: block;
+    font-size: 29px;
+    line-height: 29px;
+}
+
+.site-contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contacts {
+    display: block;
+    text-align: right;
+    color: #fff;
+    position: relative;
+    font-size: 18px;
+    transition: all ease .3s;
+}
+
+.contacts:hover {
+    color: #F26522;
+}
+
+
+.site-contacts-email { /*positioning according design layout*/
+    bottom: 5px;
+}
+
+.site-contacts-phone { /*positioning according design layout*/
+    top: 4px;
+}
+
+.product-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gallery-item-link {
+    display: block;
+    width: calc((100% / 3) - 40px);
+    margin-bottom: 17px;
+    position: relative;
+    transition: all ease .3s;
+    
+}
+
+.gallery-item-img {
+    background: linear-gradient(to bottom, #fefefe, #050E09);
+    padding: 3px;
+}
+
+.gallery-item-title {
+    color: #fff;
+    font-size: 18px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.gallery-item-link:hover .gallery-item-title {
+    color: #F26522;
+}
+
+.gallery-item-link:hover .hover-info {
+    opacity: 1;
+    transition-property: bottom, opacity;
+	transition-duration: 0.4s;
+    transition-delay: 0.10s;
+    bottom: 58px;
+}
+
+
+.hover-info {
+    width: 100%;
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    padding: 7px 37px 12px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    opacity:0; 
+    background-color: #F26522;
+}
+
+
+
+.hover-info-text {
+    font-size: 10px;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.hover-info-price {
+    font-size: 20px;
+    
+}
+
+.hover-info-details {
+    font-size: 14px;
+    align-self: flex-end;
+}
+
+.hover-info-details:after {
+    content: "";
+    background: url("../img/arrow.png") no-repeat;
+    width: 7px;
+    height: 13px;
+    z-index: 3;
+    position: absolute;
+    right: 15px;
+    bottom: 12px;
+    transition: all ease .3s;
+}
+
+
+
+.site-footer {
+    padding-top: 12px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.site-footer-copyright {
+    color: #fff;
+    font-size: 12px;
+}
+
