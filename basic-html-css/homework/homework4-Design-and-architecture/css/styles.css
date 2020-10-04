@@ -150,24 +150,13 @@ img {
     flex-direction: column;
     flex-wrap: wrap;
     height: 850px;
+    align-content: space-between;
 }
 
 .post-item {
     width: 370px;
     background-color: #fff;
     margin-bottom: 31px;
-}
-
-.align-right {
-    align-self: flex-start;
-}
-
-.align-left {
-    align-self: flex-end;
-}
-
-.align-center {
-    align-self: center;
 }
 
  .post-item-title {
