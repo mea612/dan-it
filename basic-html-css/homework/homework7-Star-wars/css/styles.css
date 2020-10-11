@@ -1,0 +1,109 @@
+@font-face {
+    font-family:"STARWARS";
+    src:url("../fonts/STARWARS.eot") format("eot"),
+    url("../fonts/STARWARS.woff") format("woff"),
+    url("../fonts/STARWARS.ttf") format("truetype"),
+    url("../fonts/STARWARS.svg#STARWARS") format("svg");
+  }
+
+.star-wars-container {
+    height: 100vh;
+    font-family: "STARWARS", sans-serif;
+    overflow: hidden;
+    background-color: #000;
+    perspective: 50px;
+}
+
+
+.star-wars {
+  position: relative;
+  top: 600px;
+  transform-origin: 100% 100%;
+  transform: translateZ(70px) rotateX(5deg);
+  animation: moving 30s infinite linear;
+}
+  
+.star-wars-caption {
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: gold;
+}
+  
+  .star-wars-text {
+    font-size: 60px;
+    text-align: justify;
+    color: gold;
+    letter-spacing: 6px;
+  }
+  
+  @keyframes moving {
+    100% {
+      transform: translateY(-1800px) translateZ(-150px) rotateX(8deg);
+    }
+  }
+
+
+
+
+
+  
+
+  /* SECOND VERSION */
+  /* .star-wars {
+    display: flex;
+    justify-content: center;
+    height: 800px;
+    perspective: 200px;
+    color: #feda4a;
+    font-size: 500%;
+    font-weight: 600;
+    letter-spacing: 6px;
+    text-align: justify;
+
+}
+
+.slow-motion {
+    position: relative;
+    top: -100px;
+    transform-origin: 50% 100%;
+    animation: slow-motion 30s cubic-bezier(.46,.16,1,.33) infinite;
+}
+.star-wars-title {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.star-wars-desc {
+    margin: 0 0 100px;
+    text-transform: uppercase;
+}
+.star-wars-caption {
+}
+.star-wars-text {
+}
+/* .star-wars {
+    position: absolute;
+    top: 600px;
+    transform: translateZ(70px) rotateX(5deg);
+    animation-name: moving;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  } 
+
+@keyframes slow-motion {
+    0% {
+        top: 470px;
+        transform: rotateX(20deg) translateZ(125px);
+    }
+
+    100% {
+
+        top: -6000px;
+        transform: rotateX(25deg) translateZ(-2500px);
+
+    }
+} */
