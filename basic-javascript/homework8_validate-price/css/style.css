@@ -1,6 +1,6 @@
 .container {
-    
-    width: 300px;
+
+    width: 30vw;
     margin: 0 auto;
 }
 
@@ -42,11 +42,13 @@
 }
 
 .price-container {
+    display: flex;
+    justify-content: space-between;
     padding: 10px;
     font-family: sans-serif;
 }
 .input-field {
-    width: 160px;
+    /* width: 160px; */
     border-radius: 4px;
     border: 2px solid #d1d1d1;
 }
