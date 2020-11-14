@@ -6,27 +6,33 @@ warning.className = 'warning';
 
 document.querySelector('.password-form').addEventListener('click', (e) => {
 	if(e.target.tagName === 'I') {
-				
-		e.target.classList.toggle('fa-eye');
-		e.target.classList.toggle('fa-eye-slash');
-				
+		switchControlType(e.target);
 	}
-	if(e.target.tagName === 'INPUT') {
-		e.target.type = e.target.type == 'password' ? 'text' : 'password';
-		warning.remove();
-	}
-			
 });
+
+function switchControlType(iconEl) {
+	iconEl.classList.toggle('fa-eye-slash');
+
+	const inputEl = iconEl.previousElementSibling;
+	inputEl.type = inputEl.type == 'password'
+		? 'text'
+		: 'password';
+
+	warning.remove();
+}
 
 document.querySelector('.btn').addEventListener('click', event => {
 	event.preventDefault();
 	
-	if(password.value === repeatPassword.value) {
+	if(
+		password.value &&
+		password.value === repeatPassword.value
+	) {
 		warning.remove();
 		alert('You are welcome');
 		
 	} else if(!password.value) {
-		alert('Please fill password field');
+		alert('Please fill in password field');
 	} else {
 		repeatPassword.after(warning);
 	}
