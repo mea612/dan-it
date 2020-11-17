@@ -44,3 +44,4 @@ function cloneObject(value) {
 console.log(student);
 const newStudent = cloneObject(student);
 console.log(newStudent);
+
