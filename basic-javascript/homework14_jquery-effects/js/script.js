@@ -16,7 +16,7 @@ $(document.body).prepend($btnToTop);
 
 $(function () {
     $(window).scroll(function() {
-        if ($(this).scrollTop() != 0) {
+        if ($(this).scrollTop() > $(this).innerHeight()) {
             $btnToTop.fadeIn(); // show the button
         } else {
             $btnToTop.fadeOut(); // hide the button
