@@ -3,6 +3,7 @@
     --secondary-color: #373737;
     --theme-primary: #fff;
     --theme-secondary: #222;
+    --theme-additional: #FFEB3B;
 }
 
 
@@ -68,7 +69,7 @@ a {
     height: 30px;
     width: 30px;
     margin: 10px 5px 0 0;
-    border-top: 15px solid var(--theme-primary);
+    border-top: 15px solid var(--theme-additional);
     border-bottom: 15px solid var(--theme-secondary);
     border-right: 0;
     border-left: 0;
