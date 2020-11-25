@@ -30,6 +30,8 @@
 
 let intervalId;
 const slides = Array.from(document.querySelectorAll('.image-to-show'));
+const stopBtn = document.querySelector('.pauseBtn');
+const startBtn = document.querySelector('.continueBtn');
 
 function showNextImage() {
     const currentSlide = slides.indexOf(document.querySelector('.image-visible'));
@@ -43,20 +45,28 @@ function showNextImage() {
 }
 slides[0].style.display = 'block';
 
-function startImageSwitch() {
-    intervalId = setInterval(showNextImage, 3000);
+function startImageSwitch() { 
+    if(!intervalId) {
+        intervalId = setInterval(showNextImage, 3000);
+    }
+    
 }
 
 function stopImageSwitch() {
     clearInterval(intervalId);
+    intervalId = null;
 }
 
 startImageSwitch();
 
-document.querySelector('.pauseBtn').addEventListener('click', () => {
+stopBtn.addEventListener('click', () => {
     stopImageSwitch();
+    stopBtn.disabled = true;
+    startBtn.disabled = false;
 });
 
-document.querySelector('.continueBtn').addEventListener('click', () => {
+startBtn.addEventListener('click', () => {
     startImageSwitch();
+    startBtn.disabled = true;
+    stopBtn.disabled = false;
 });
