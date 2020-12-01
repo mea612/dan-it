@@ -1,0 +1,34 @@
+{
+  "name": "project-x",
+  "version": "1.0.0",
+  "description": "Olena Shedenko fe_22",
+  "main": "app.js",
+  "private": "true",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olena-shedenko/dan-it.git"
+  },
+  "keywords": [
+    "advanced-html-css",
+    "homework-1-npm"
+  ],
+  "author": "oshedenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olena-shedenko/dan-it/issues"
+  },
+  "homepage": "https://github.com/olena-shedenko/dan-it#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "eslint": "^7.14.0",
+    "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "moment": "^2.29.1"
+  }
+}
