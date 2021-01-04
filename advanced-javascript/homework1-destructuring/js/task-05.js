@@ -19,6 +19,6 @@ const bookToAdd = {
 
 
 
-const newBooks = [...books, {...bookToAdd}];
-// const newBooks = [{...bookToAdd},...books]; //add new elem at the beginning of the array
+const newBooks = [...books, bookToAdd];
+
 console.log(newBooks);
