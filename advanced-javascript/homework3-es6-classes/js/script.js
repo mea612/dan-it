@@ -35,7 +35,18 @@ class Programmer extends Employee {
     }
     get salary() {
         return this._salary * 3;
-        
+
+    }
+    set salary(value) {
+        this._salary = value;
+    }
+
+    get lang() {
+        return this._lang;
+    }
+
+    set lang(value) {
+        this._lang = value;
     }
 }
 
