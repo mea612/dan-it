@@ -25,13 +25,18 @@ const styles = {
 class App extends Component {
   constructor() {
     super();
-    
+    let savedCart;
+        try {
+          savedCart = JSON.parse(localStorage.getItem('cart') || '[]');
+        } catch(e) {
+          console.error(e);
+        }
     this.state = {
       cards: [],
       modal: {
         isOpen: false,
       },
-      cart: []
+      cart: savedCart
     }
   }
   
@@ -53,16 +58,6 @@ class App extends Component {
         return result;
       })
       .catch(console.error)
-      .then(r => {
-        let savedCart;
-        try {
-          savedCart = JSON.parse(localStorage.getItem('cart') || '[]');
-          this.setState({cart: savedCart})
-        } catch(e) {
-          console.error(e);
-        }
-        return r;
-      })
       .then(data => this.setState({cards: data}))
   }
 
