@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Leica S (Typ 006) / 70mm Lens Set",
+        "color": "black",
+        "id": "00367",
+        "price": "18,500",
+        "image": "Leica_S-002_540x.jpg"
+    },
+    {
+        "name": "Leica S (Typ 006)",
+        "color": "black",
+        "id": "00368",
+        "price": "15,995",
+        "image": "1347910998_540x.jpg"
+    },
+    {
+        "name": "Leica S (Typ 007)",
+        "color": "black",
+        "id": "00369",
+        "price": "16,900",
+        "image": "emo_Leica_S_Typ007_1_540x.jpg"
+    },
+    {
+        "name": "Leica M-P ‘grip’ by Rolf Sachs",
+        "color": "red",
+        "id": "00370",
+        "price": "7,020",
+        "image": "leica-red.jpg"
+    },
+    {
+        "name": "Leica M-P (Typ 240) Titanium Set",
+        "color": "silver",
+        "id": "00371",
+        "price": "22,900",
+        "image": "leica-grey.jpg"
+    },
+    {
+        "name": "Leica M9-P White Edition Set - 23/50",
+        "color": "white",
+        "id": "00372",
+        "price": "32,995",
+        "image": "leica-white.jpg"
+    },
+    {
+        "name": "Leica M - Silver Chrome (Typ 240)",
+        "color": "silver / black",
+        "id": "00373",
+        "price": "7,250",
+        "image": "M240_silver.jpg"
+    },
+    {
+        "name": "Used Leica M Monochrom (Typ 246) Silver Chrome Historica Edition - 15/40",
+        "color": "blue",
+        "id": "00374",
+        "price": "11,995",
+        "image": "leica-blue.jpg"
+    },
+    {
+        "name": "Leica Ultravid 10 x 32 HD-PLUS, Edition Hermes",
+        "color": "dark red",
+        "id": "00375",
+        "price": "11,995",
+        "image": "binoculars-red.jpg"
+    },
+    {
+        "name": "Leica SL (Typ 601), Black",
+        "color": "black",
+        "id": "00376",
+        "price": "7,450",
+        "image": "black-7330.jpg"
+    }
+]
