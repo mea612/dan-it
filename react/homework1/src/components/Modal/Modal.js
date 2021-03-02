@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Button from '../Button/Button';
 
 const ModalShadow = styled.div`
     position: fixed;
@@ -30,20 +31,6 @@ const ModalHeader = styled.div`
     height: 66px;
     border-radius: 5px;
 `
-
-const ButtonStyled = styled.button`
-    outline: none;
-    border: none;
-    background: none;
-    color: #fff;
-    font-size: 18px;
-    cursor: pointer;
-    transition: all .2s;
-    &:hover {
-        transform: scale(1.3);
-    }
-`
-
 const ModalBody = styled.div`
     padding: 38px 42px;
     text-align:center;
@@ -70,15 +57,12 @@ export default class Modal extends React.Component {
    
     render() {
         const{header, closeButton, text, actions, primary}=this.props;
-        if(!this.props.show) {
-            return null;
-        }
         return (
             <ModalShadow onClick={this.onClose}>
                 <ModalStyled primary={primary}>
                     <ModalHeader primary={primary}>
                         <h3>{header}</h3>
-                        {closeButton && <ButtonStyled onClick={this.onClose}>&#10005;</ButtonStyled>}
+                        {closeButton && <Button onClick={this.onClose} closeBtn text={'✕'}></Button>}
                     </ModalHeader>
                     <ModalBody>
                         <ModalText>{text}</ModalText>

@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle, css } from "styled-components";
 import Button from "./components/Button/Button";
 import Modal from "./components/Modal/Modal";
 
@@ -11,23 +11,6 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
   }
 `
-const Buttons = styled.button`
-  background-color:  ${props => props.primary ? "#b3382c" : "#bf3d15"};
-  width: 102px;
-  display:flex;
-  justify-content: center;
-  align-items:center;
-  outline: none;
-  border: none;
-  border-radius: 3px;
-  padding: 15px 0;
-  color: #fff;
-  transition: background-color .3s;
-  &:hover {
-    background-color: ${props => props.primary ? "#9f3227" : "#a93613"};
-  }
-`
-
 const StyledApp = styled.div`
     width: 800px;
     margin: 0 auto;
@@ -37,6 +20,16 @@ const StyledApp = styled.div`
     align-items: center;
 `
 
+const modalText = [
+  {
+    header: 'Do you want to delete this file?',
+    text: 'Once you delete this file, it won’t be possible to undo this action. Are you sure you want to delete?',
+  },
+  {
+    header: 'Do you want to add this file?',
+    text: "If you add a file to a shared folder, it's automatically shared with all participants, too",
+  },
+];
 
 class App  extends React.Component {
   state = {
@@ -58,30 +51,20 @@ class App  extends React.Component {
           <Button 
             text="Open first modal"
             backgroundColor="#b3382c"
-            onClick={() => this.setState({
-              modal: {
-                header: "Do you want to delete this file?",
-                text: "Once you delete this file, it won’t be possible to undo this action. Are you sure you want to delete?",
-                isOpen: true,
-                primary: true,
-              }
-            })}
+            onClick={
+              () => this.handleOpenModal(modalText[0], true, true)
+            }
             primary={true}
           />
           <Button 
             text="Open second modal"
             backgroundColor="#e2562b"
-            onClick={() => this.setState({
-              modal: {
-                header: "Do you want to add this file?",
-                text: "If you add a file to a shared folder, it's automatically shared with all participants, too",
-                isOpen: true,
-                primary: false,
-              }
-            })}
+            onClick={
+              () => this.handleOpenModal(modalText[1], true, false)
+            }
             primary={false}
           />
-          <Modal 
+         {modal.isOpen && <Modal 
             header={modal.header}
             closeButton={true}
             text={modal.text}
@@ -90,16 +73,26 @@ class App  extends React.Component {
                 isOpen: false
               }
             })}
-            show={modal.isOpen}  
             primary={modal.primary}
             actions = {{
-              cancelButton: (onClose) => <Buttons primary={modal.primary} onClick={onClose}>Cancel</Buttons>,
-              okButton: (onClose) => <Buttons primary={modal.primary} onClick={onClose}>Ok</Buttons>
+              cancelButton: (onClose) => <Button primary={modal.primary} onClick={onClose}  text={'Cancel'} modalBtn/>,
+              okButton: (onClose) => <Button primary={modal.primary} onClick={onClose} text={'Ok'} modalBtn/>
             }}
-          />
+          />}
       </StyledApp>
       
     );
+  }
+
+  handleOpenModal = (modalNum, isOpen, primary) => {
+    this.setState({
+      modal: {
+        header: modalNum.header,
+        text: modalNum.text,
+        isOpen: isOpen,
+        primary: primary
+      }
+    })
   }
   
 }
