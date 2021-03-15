@@ -1,0 +1,14 @@
+.header {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid crimson;
+}
+
+.my-form {
+    display: grid;
+}
+
+.my-input {
+    padding: 10px 0;
+}
