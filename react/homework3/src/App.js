@@ -5,19 +5,11 @@ import Modal from "./components/Modal/Modal";
 import AppRoutes from './routes/AppRoutes';
 
 const App = () => {
-  
-    let savedCart;
-    try {
-      savedCart = JSON.parse(localStorage.getItem('cart') || '[]');
-      
-    } catch(e) {
-      console.error(e);
-    }
 
   const[cards, setCards] = useState([]);
   const[isModalShown, setIsModalShown] = useState({isOpen: false});
   
-  const[cart, setCart] = useState(savedCart);
+  const[cart, setCart] = useState(null);
 
   const toggleFavourite = (cardId) => {
     const favCards = cards.map(card => 
@@ -86,13 +78,27 @@ const App = () => {
   }, [cards]);
 
   useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart));
+    if (cart) {
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
   }, [cart]);
+
+  useEffect(() => {
+    let storedCart;
+    try {
+      storedCart = JSON.parse(localStorage.getItem('cart') || '[]');
+      
+    } catch(e) {
+      console.error(e);
+      storedCart = [];
+    }
+    setCart(storedCart);
+  }, [])
 
   const favouriteCards = cards.filter(card => card.isFavourite);
 
   const cardsInCart = cards.length
-    ? cart.map(item => ({...cards.find(card => card.id === item.id && card), ...item}))
+    ? (cart || []).map(item => ({...cards.find(card => card.id === item.id && card), ...item}))
     : [];
 
   const amountInCart = cardsInCart.reduce((acc, curr) => acc + curr.amount, 0);
