@@ -1,0 +1,6 @@
+export const SET_CARDS = "SET_CARDS"
+export const SET_MODAL = "SET_MODAL"
+export const SET_CART = "SET_CART"
+export const TOGGLE_FAVOURITE = "TOGGLE_FAVOURITE"
+export const ADD_TO_CART = "ADD_TO_CART"
+export const REMOVE_FROM_CART ="REMOVE_FROM_CART"
