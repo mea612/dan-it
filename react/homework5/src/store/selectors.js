@@ -15,4 +15,4 @@ export const getTotalPrice = state => getCardsInCart(state).reduce(
     (acc, curr) => acc + parseInt(curr.price.replace(/,/g, '')) * curr.amount,
     0
   );
-
+// testing
